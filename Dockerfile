@@ -1,4 +1,4 @@
-FROM java:8-alpine
+FROM openjdk:23-jdk
 
 RUN apk add --update ca-certificates && rm -rf /var/cache/apk/* && \
   find /usr/share/ca-certificates/mozilla/ -name "*.crt" -exec keytool -import -trustcacerts \
