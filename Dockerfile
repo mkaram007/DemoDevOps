@@ -1,4 +1,4 @@
-FROM openjdk:19-jdk-alpine3.16
+FROM ibmjava:8-sdk-alpine
 
 RUN apk add --update ca-certificates && rm -rf /var/cache/apk/* && \
   find /usr/share/ca-certificates/mozilla/ -name "*.crt" -exec keytool -import -trustcacerts \
