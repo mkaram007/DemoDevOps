@@ -12,10 +12,10 @@ pipeline{
             }
         }
 
-        /*stage("Build"){
+        stage("Build"){
             sh "chmod u+x ./mvnw"
             sh "./mvnw package"
-        }*/
+        }
         stage("docker"){
             steps{
                 sh "docker version"
