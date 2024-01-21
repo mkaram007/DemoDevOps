@@ -1,9 +1,6 @@
 pipeline{
     agent any
-    environment {
-	    AUTHOR = 'KARAM'
-	    SERVER_CREDENTIALS = credentials('nexus')
-    }
+
     stages{
         
         stage("init"){
@@ -13,8 +10,10 @@ pipeline{
         }
 
         stage("Build"){
-            sh "chmod u+x ./mvnw"
-            sh "./mvnw package"
+            steps{
+		sh "chmod u+x ./mvnw"
+            	sh "./mvnw package"
+	    }
         }
         stage("docker"){
             steps{
