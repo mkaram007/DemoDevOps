@@ -36,7 +36,7 @@ pipeline{
             echo "Deploying to tomcat"
             deploy adapters: [tomcat9(credentialsId: '7fbccacc-c7da-4d12-87c8-d421b41093c1', 
             path: '', 
-            url: 'http://192.168.1.4:8080')], 
+            url: 'http://192.168.2.247:8080')], 
             contextPath: null, 
             war: '**/*.war'
         }
