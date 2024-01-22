@@ -1,3 +1,4 @@
+@releasenotes _
 pipeline{
     agent any
 
@@ -7,6 +8,7 @@ pipeline{
             steps{
             git branch: "main", url:"https://github.com/mkaram007/DemoDevOps"
             }
+			releasenotes()
         }
 
         stage("Build"){
