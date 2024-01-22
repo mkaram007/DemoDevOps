@@ -7,8 +7,9 @@ pipeline{
         stage("init"){
             steps{
             git branch: "main", url:"https://github.com/mkaram007/DemoDevOps"
-            }
+            
 			releasenotes()
+			}
         }
 
         stage("Build"){
